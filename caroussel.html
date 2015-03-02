@@ -15,42 +15,36 @@
             <a href="#">
               <img src="./img/1.jpg" />
               <p class="title">Title</p>
-              <p class="subTitle">SubTitle</p>
             </a>
           </li>
           <li class="slide">
             <a href="#">
               <img src="./img/2.jpg" />
               <p class="title">Title</p>
-              <p class="subTitle">SubTitle</p>
             </a>
           </li>
           <li class="slide">
             <a href="#">
               <img src="./img/3.png" />
               <p class="title">Title</p>
-              <p class="subTitle">SubTitle</p>
             </a>
           </li>
           <li class="slide">
             <a href="#">
               <img src="./img/1.jpg" />
               <p class="title">Title</p>
-              <p class="subTitle">SubTitle</p>
             </a>
           </li>
           <li class="slide">
             <a href="#">
               <img src="./img/2.jpg" />
               <p class="title">Title</p>
-              <p class="subTitle">SubTitle</p>
             </a>
           </li>
           <li class="slide">
             <a href="#">
               <img src="./img/3.png" />
               <p class="title">Title</p>
-              <p class="subTitle">SubTitle</p>
             </a>
           </li>
         </ul>
@@ -60,6 +54,16 @@
     </section>
     <div class="anotherContent" style="height: 5000px;">
     </div>
+    <script src="./js/caroussel.js"></script>
+    <script>
+      var sliders = document.getElementsByClassName('contentCaroussel');
+      var slider = [];
+
+      for (var i = 0, length = sliders.length; i < length; i++) {
+        slider[i] = new Slider(sliders[i]);
+      }
+    </script>
+    <!--
     <script src="./js/require.js"></script>
     <script>
       require.config({
@@ -76,5 +80,6 @@
         }
       });
     </script>
+    -->
   </body>
 </html>
