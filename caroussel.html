@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+  <head>
+    <title>Simple Caroussel</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/caroussel.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <div class="anotherContent" style="height: 500px">
+    </div>
+    <section class="caroussel">
+      <div class="contentCaroussel">
+        <ul class="slider transitionSlider">
+          <li class="slide">
+            <a href="#">
+              <img src="./img/1.jpg" />
+              <p class="title">Title</p>
+              <p class="subTitle">SubTitle</p>
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <img src="./img/2.jpg" />
+              <p class="title">Title</p>
+              <p class="subTitle">SubTitle</p>
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <img src="./img/3.png" />
+              <p class="title">Title</p>
+              <p class="subTitle">SubTitle</p>
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <img src="./img/1.jpg" />
+              <p class="title">Title</p>
+              <p class="subTitle">SubTitle</p>
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <img src="./img/2.jpg" />
+              <p class="title">Title</p>
+              <p class="subTitle">SubTitle</p>
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <img src="./img/3.png" />
+              <p class="title">Title</p>
+              <p class="subTitle">SubTitle</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="shortSlider">
+        </ul>
+      </div>
+    </section>
+    <div class="anotherContent" style="height: 5000px;">
+    </div>
+    <script src="./js/require.js"></script>
+    <script>
+      require.config({
+        baseUrl: './js/'
+      });
+    </script>
+    <script>
+      require(['caroussel'], function(Slider) {
+        var sliders = document.getElementsByClassName('contentCaroussel');
+        var slider = [];
+
+        for (var i = 0, length = sliders.length; i < length; i++) {
+          slider[i] = new Slider(sliders[i]);
+        }
+      });
+    </script>
+  </body>
+</html>
